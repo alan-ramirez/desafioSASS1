@@ -1,0 +1,459 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgba(226, 219, 219, 0.452);
+    margin: 25px;
+}
+
+/* grid layout*/
+.contenedor {
+    display: grid;
+    grid-template-areas:    
+                            "header header"
+                            "nav nav"
+                            "main main"
+                            "footer footer";
+    justify-content: flex-start;
+}
+section {
+    grid-area: main;
+    padding: 0;
+}
+
+/* inicio estilos del menu */
+header{
+    grid-area: header;
+}
+
+
+.d-flex {
+    height: 70px;
+    max-width: 1400px;
+}
+
+.logo {
+    /* animacion */
+    animation-name: logo;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+
+}
+
+.form-control {
+    width: 40%;
+}
+.telefono {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@keyframes logo {
+    10% {
+        transform:skewX(-2deg)
+    }
+    50% {
+        transform: skewX(2deg);
+    }
+    60% {
+        transform:skewX(2deg);
+    }
+    100% {
+        transform: skewX(-2deg);
+    }
+
+}
+
+nav{
+    grid-area: nav;
+    ul {
+        display: flex;
+        list-style: none;
+        li:hover {
+            background-color: rgba(226, 219, 219, 0.452);
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* fin de estilos del menu */
+/* Estilos carousel */
+main {
+    grid-area: main;
+}
+
+
+.carousel-inner img {
+    object-fit: cover;
+    height: 70vh;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 70vh;
+}
+
+
+/* fin de estilos carousel */
+
+/*Estilos cards*/
+
+.card-group{
+    padding-top: 40px;
+}
+.card {
+    background-color: rgb(227, 227, 252);
+}
+
+.card-img-top {
+    width: 80px;
+    margin-left: 20px;
+}
+
+/* fin de estilos cards */
+
+/* estilos footer*/
+footer {
+    grid-area: footer;
+}
+
+footer p {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 40px;
+}
+footer h4 {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+.footerContainer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: white;
+}
+footer li {
+    list-style: none;
+    li:hover   {
+            background-color: rgba(226, 219, 219, 0.452);
+            transform: scale(1.1);
+        }
+}
+.mapa {
+    width: 500px;
+    height: 400px;
+}
+/*fin estilos footer*/
+
+/* estilos clases*/
+
+.imgClases {
+    object-fit: cover;
+    height: 70px;
+}
+/*Estilos nosotros */
+
+.img2 {
+    width: 90%;
+    margin-top: 30px;
+}
+.texto1 {
+    font-size: 25px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* estilos productos */
+.mainProductos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.box img {
+    width: 380px;
+    height: 260px;
+    margin: 2px;
+}
+.texto2 {
+    text-align:center;
+    font-size: 28px;
+}
+
+
+/* estilos contacto */
+.contacto {
+    margin: 50px;
+    text-align: center;
+}
+.tituloForm {
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+.box2 {
+    display: flex;
+    justify-content: left;
+    margin-left: 30px;
+    padding-top: 20px;
+}
+label {
+    font-size: 25px;
+    margin-right: 30px;
+    width: 280px;
+    text-align: left;
+}
+.cuadro {
+    font-size: 25px;
+    height: 30px;
+}
+.box3 {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    margin: 20px;
+    .cuadro1 {
+        width: 800px;
+        height: 300px;
+        text-align: left;
+    }
+}
+
+.boton {
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
+    background-color: white;
+    font-weight: bold;
+    display: inline;
+}
+
+.p2 {
+    text-align: center;
+    font-size: 25px;
+    margin: 20px;
+    padding-top: 40px;
+}
+
+section h5 {
+    font-size: 40px;
+    text-align: center;
+    background-color: black ;
+}
+section p3 {
+    margin-top: 50px;
+    font-size: 25px;
+    color: black;
+    width: 50px;
+    background-color: white;
+}
+
+@media only screen and (max-width:600px) and (min-width: 320px) {
+    /* Inicio */
+    .logo {
+        width: 100px;
+    }
+
+    .btn-secondary {
+        display: none;
+    }
+    .form-control {
+        display: none;
+    }
+    .telefono {
+        width: 100px;
+        font-size: 9px;
+    }
+    .btn-outline-success {
+        display: none;
+    }
+    .d-flex {
+        max-width: 100px;
+    }
+    .menu {
+        margin-bottom: 40px;
+    }
+    nav ul li a {
+        font-size: 15px;
+    }
+    .img1 {
+        width: 97%;
+    }
+    footer p {
+        font-size: 8px;
+        margin: 0px 20px;
+        width: 230px;
+    }
+
+    h4 {
+        font-size: 12px;
+        margin: 20px;
+    }
+    section {
+        padding: 0px;
+        margin: 0px;
+    }
+    .carousel-caption {
+        padding: 0px;
+        margin: 0px;
+    }
+    .carousel{
+        padding: 0px;
+        margin: 0px;
+    }
+    .slide {
+        padding: 0px;
+        margin: 0px;
+    }
+    .carousel-inner{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    /*Submenú*/
+    .subMenu li a {
+        display: block;
+        padding: 5px  ;
+        color: black;
+        font-size: 12px;
+        text-decoration: none;
+    }
+    /* Nosotros */
+    .texto1 {
+        font-size: 18px;
+        text-align: center;
+    }
+    /* productos */
+    .mainProductos {
+        display: flex;
+        flex-direction: column;
+    }
+    .box img {
+        width: 90%;
+        margin: 2px;
+        padding-left: 10px;
+        padding-top: 10px;
+    }    
+    .texto2 {
+        font-size: 24px;
+    }
+    /* clases */
+    .textoClases {
+        font-size: 17px;
+        text-align: center;
+        padding-bottom: 12px;
+        margin: 2px;
+    }
+    
+    .img3 {
+        padding-top:    30px;
+        padding-left: 25px;
+        width: 90%;
+    }
+    /* contacto */
+    .tituloForm {
+        font-size: 30px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .box2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        margin: 20px;
+    }
+    label {
+        margin: 20px;
+        font-size: 25px;
+    }
+    .cuadro {
+        font-size: 15px;
+    }
+    .box3 {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding-left: 10px  ;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .boton {
+        font-size: 15px;
+        width: 100px;
+        height: 20px;
+        background-color: white;
+        font-weight: bold;
+        display: inline;
+    }
+
+    .p2 {
+        text-align: center;
+        margin-bottom: 20px;
+        padding-top: 90px;
+    }
+}
+
+@media only screen and (max-width:900px) and (min-width: 601px) {
+    .header {
+        width: 100%;
+    }
+    .logo {
+        width: 120px;
+        height: 70px;
+    }
+
+    .telefono {
+        width: 600px;
+        font-size: 19px;
+    }
+    
+    .d-flex {
+        max-width: 130px;
+    }
+    .form-control {
+        display: none;
+    }
+    .btn-outline-success {
+        display: none;
+    }
+
+    footer p {
+        font-size: 15px;
+        margin: 20px 20px;
+    }
+}
+@media only screen and (min-width: 900px) {
+    /* Estilos inicio*/
+    .container-fluid {
+        font-size: 22px;
+    }
+
+    /* Estilos clases*/
+    .car2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cont h5 {
+        font-size: 50px;
+        color: white;
+        background-color: black;
+    }
+    .carousel-caption h5 {
+        font-size: 35px;
+    }
+}
+
